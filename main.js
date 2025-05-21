@@ -62,9 +62,24 @@ function submitGuess(options) {
   return guess.sort()
 }
 
+function compareArrays(array1, array2) {
+  console.log(array1)
+  console.log(array2)
+  const isLengthEqual = array1.length === array2.length
+  if (!isLengthEqual) return false;
+
+  let isEqual = true;
+  for (let i = 0; i < array1.length; i++) {
+     if (array1[i] !== array2[i]) {
+        return false;
+     }
+  }
+  return isEqual;
+}
+
 function verifyAnswer(guess, answers) {
   answers.forEach((answer) => {
-    if (guess.every((val, index) => val === answer.words[index])) return true
+    if (compareArrays(guess, answer["words"].sort())) return true
   })
   return false
 }
