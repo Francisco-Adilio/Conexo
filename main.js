@@ -1,11 +1,43 @@
 const optionsGrid = document.querySelector("#optionsGrid")
 const answersGrid = document.querySelector("#answersGrid")
 
-const options = optionsGrid.children
+  const answers = [
+    {"theme": "pronomes demonstrativos", "words": ["aquela", "este", "isso", "aquilo"]},
+    {"theme": "conjunções adversativas", "words": ["mas", "porém", "todavia", "no entanto"]},
+    {"theme": "advérbio de tempo", "words": ["hoje", "atualmente", "depois", "agora"]},
+    {"theme": "verbos dicendi", "words": ["digo","falar","explicitou","afirmamos"]}
+  ]
 
-for (let i=0; i<16; i++) {
-  options[i].addEventListener("click", toggleClick)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
+
+function generateBoard() {
+  let board = []
+  answers.forEach((answer) => {
+    answer["words"].forEach((word) => {
+      board.push(word)
+    })
+  })
+
+  shuffleArray(board)
+  board.forEach((word) => {
+    const option = document.createElement("div")
+    const optionText = document.createTextNode(word)
+    option.appendChild(optionText)
+    option.setAttribute("class", "options")
+    option.addEventListener("click", toggleClick)
+    optionsGrid.appendChild(option)
+  })
+}
+
+generateBoard()
+
+const options = optionsGrid.children
 
 let selectedOptions = []
 function toggleClick(e) {
@@ -19,25 +51,47 @@ function toggleClick(e) {
     e.target.style.backgroundColor = '#009AFE'
   }
 
-  if (selectedOptions.length == 4) submitAnswer()
+  if (selectedOptions.length == 4) rewardAnswer()
 }
 
-let submitedAnswers = 0
-function submitAnswer() {
-  submitedAnswers++
-  selectedOptions.forEach((option) => {
-    option.remove()
+function submitGuess(options) {
+  let guess = []
+  options.forEach((option) => {
+    guess.push(option.childNodes[0].data)
   })
+  return guess.sort()
+}
 
-  let newHeigth = 100 - 25 * submitedAnswers
-  optionsGrid.style.height = newHeigth.toString() + "%"
-  selectedOptions = []
+function verifyAnswer(guess, answers) {
+  answers.forEach((answer) => {
+    if (guess.every((val, index) => val === answer.words[index])) return true
+  })
+  return false
+}
 
-  const answerDiv = document.createElement("div")
-  const answerText = document.createTextNode("Acertou!")
-  answerDiv.appendChild(answerText)
-  answerDiv.setAttribute("class", "answers")
-  console.log(answersGrid)
-  answersGrid.appendChild(answerDiv)
-  answersGrid.style.height = (100 - newHeigth).toString() + "%"
+
+function rewardAnswer() {
+  const guess = submitGuess(selectedOptions)
+
+  if (verifyAnswer(guess, answers)) {
+    selectedOptions.forEach((option) => {
+      option.remove()
+    })
+    let newHeigth = 100 - 25 * submitedAnswers
+    optionsGrid.style.height = newHeigth.toString() + "%"
+
+    const answerDiv = document.createElement("div")
+    const answerText = document.createTextNode("Acertou!")
+
+    answerDiv.appendChild(answerText)
+    answerDiv.setAttribute("class", "answers")
+
+    answersGrid.appendChild(answerDiv)
+    answersGrid.style.height = (100 - newHeigth).toString() + "%"
+  } else {
+    selectedOptions.forEach((option) => {
+      option.style.backgroundColor = '#1E293B'
+    })
+    selectedOptions = []
+  }
 }
