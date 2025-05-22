@@ -59,7 +59,7 @@ function toggleClick(e) {
     selectedOptions.splice(indexOption, 1)
     e.target.style.backgroundColor = '#1E293B'
   }
-  if (selectedOptions.length < 4) {
+  else if (selectedOptions.length < 4) {
     selectedOptions.push(e.target)
     e.target.style.backgroundColor = '#009AFE'
 
