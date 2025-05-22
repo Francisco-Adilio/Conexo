@@ -19,6 +19,9 @@ function shuffleArray(array) {
   return array;
 }
 
+function changeOptionColor(e) {
+  e.target.style.backgroundColor = '#1E293B'
+}
 async function generateBoard() {
   const answers = await selectAnswers()
   let board = []
@@ -35,6 +38,7 @@ async function generateBoard() {
     option.appendChild(optionText)
     option.setAttribute("class", "options")
     option.addEventListener("click", toggleClick)
+    option.addEventListener("animationend", changeOptionColor)
     optionsGrid.appendChild(option)
   })
 
@@ -55,7 +59,7 @@ function toggleClick(e) {
     selectedOptions.splice(indexOption, 1)
     e.target.style.backgroundColor = '#1E293B'
   }
-  else if (selectedOptions.length < 4) {
+  if (selectedOptions.length < 4) {
     selectedOptions.push(e.target)
     e.target.style.backgroundColor = '#009AFE'
 
@@ -141,7 +145,6 @@ async function rewardAnswer() {
       } else {
         option.classList.toggle("error-animation")
       }
-      option.style.backgroundColor = '#1E293B'
     })
   }
   selectedOptions = []
