@@ -1,12 +1,15 @@
-const optionsGrid = document.querySelector("#optionsGrid")
-const answersGrid = document.querySelector("#answersGrid")
-
-  const answers = [
-    {"theme": "pronomes demonstrativos", "words": ["aquela", "este", "isso", "aquilo"]},
-    {"theme": "conjunções adversativas", "words": ["mas", "porém", "todavia", "no entanto"]},
-    {"theme": "advérbio de tempo", "words": ["hoje", "atualmente", "depois", "agora"]},
-    {"theme": "verbos dicendi", "words": ["digo","falar","explicitou","afirmamos"]}
-  ]
+async function selectAnswers() {
+  const chosedAnswers = []
+  const response = await fetch('./answers.json')
+  const data = await response.json()
+  
+  for (let i = 0; i < 4; i++) {
+    let randomIndex = Math.floor(Math.random()*data.length)
+    chosedAnswers.push(data[randomIndex])
+    data.splice(randomIndex, 1)
+  }
+  return chosedAnswers
+}
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -16,7 +19,8 @@ function shuffleArray(array) {
   return array;
 }
 
-function generateBoard() {
+async function generateBoard() {
+  const answers = await selectAnswers()
   let board = []
   answers.forEach((answer) => {
     answer["words"].forEach((word) => {
@@ -33,9 +37,14 @@ function generateBoard() {
     option.addEventListener("click", toggleClick)
     optionsGrid.appendChild(option)
   })
+
+  return answers
 }
 
 generateBoard()
+
+const optionsGrid = document.querySelector("#optionsGrid")
+const answersGrid = document.querySelector("#answersGrid")
 
 const options = optionsGrid.children
 
@@ -88,8 +97,11 @@ function verifyAnswer(guess, answers) {
 }
 
 let submitedAnswers = 0
-function rewardAnswer() {
+async function rewardAnswer() {
   const guess = submitGuess(selectedOptions)
+
+  const response = await fetch('./answers.json')
+  const answers = await response.json()
 
   if (verifyAnswer(guess, answers)) {
     submitedAnswers++

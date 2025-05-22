@@ -1,0 +1,74 @@
+[
+  {
+    "theme": "pronomes relativos",
+    "words": ["qual", "próprio", "mesma", "tal"]
+  },
+  {
+    "theme": "pronomes demonstrativos",
+    "words": ["aquela", "este", "isso", "aquilo"]
+  },
+  {
+    "theme": "pronome pessoais oblíquos",
+    "words": ["mim", "te", "lhe", "consigo"]
+  },
+  {
+    "theme": "pronome pessoais retos",
+    "words": ["eu", "ele", "vos", "nos"]
+  },
+  {
+    "theme": "conjunções adversativas",
+    "words": ["mas", "porém", "todavia", "no entanto"]
+  },
+  {
+    "theme": "conjunções aditivas",
+    "words": ["e", "também", "além disso", "bem como"]
+  },
+  {
+    "theme": "conjunções conclusivas",
+    "words": ["logo", "portanto", "então", "assim"]
+  },
+  {
+    "theme": "conjunções alternativas",
+    "words": ["ou", "ora", "nem", "talvez"]
+  },
+  {
+    "theme": "preposições",
+    "words": ["a", "de", "perante", "em"]
+  },
+  {
+    "theme": "advérbio de lugar",
+    "words": ["aqui", "cá", "longe", "lá"]
+  },
+  {
+    "theme": "advérbio de tempo",
+    "words": ["hoje", "atualmente", "depois", "agora"]
+  },
+  {
+    "theme": "advérbio de afirmação",
+    "words": ["sim", "decerto", "realmente", "sem dúvida"]
+  },
+  {
+    "theme": "advérbio de modo",
+    "words": ["calmamente", "primeiramente", "a frente", "de mansinho"]
+  },
+  {
+    "theme": "verbos dicendi",
+    "words": ["digo", "falar", "explicitou", "afirmamos"]
+  },
+  {
+    "theme": "verbos infinitivos",
+    "words": ["achar", "comer", "chover", "jogar"]
+  },
+  {
+    "theme": "verbos de fenômenos da natureza",
+    "words": ["nevar", "garoar", "ventar", "amanhecer"]
+  },
+  {
+    "theme": "verbos no subjuntivo",
+    "words": ["olhe", "houvesse", "cantes", "propuser"]
+  },
+  {
+    "theme": "numeral",
+    "words": ["terceiro", "dobro", "quatro", "C"]
+  }
+]
