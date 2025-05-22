@@ -63,32 +63,36 @@ function submitGuess(options) {
 }
 
 function compareArrays(array1, array2) {
-  console.log(array1)
-  console.log(array2)
   const isLengthEqual = array1.length === array2.length
   if (!isLengthEqual) return false;
 
   let isEqual = true;
   for (let i = 0; i < array1.length; i++) {
-     if (array1[i] !== array2[i]) {
+    if (array1[i] !== array2[i]) { 
         return false;
-     }
+    }
   }
   return isEqual;
 }
 
+let answerGuessed
 function verifyAnswer(guess, answers) {
+  let isRight = false
   answers.forEach((answer) => {
-    if (compareArrays(guess, answer["words"].sort())) return true
+    if (compareArrays(guess, answer["words"].sort())) {
+      isRight = true
+      answerGuessed = answer
+    } 
   })
-  return false
+  return isRight
 }
 
-
+let submitedAnswers = 0
 function rewardAnswer() {
   const guess = submitGuess(selectedOptions)
 
   if (verifyAnswer(guess, answers)) {
+    submitedAnswers++
     selectedOptions.forEach((option) => {
       option.remove()
     })
@@ -96,9 +100,22 @@ function rewardAnswer() {
     optionsGrid.style.height = newHeigth.toString() + "%"
 
     const answerDiv = document.createElement("div")
-    const answerText = document.createTextNode("Acertou!")
 
-    answerDiv.appendChild(answerText)
+    const themeParagraph = document.createElement("p")
+    themeParagraph.setAttribute("id", "themeParagraph")
+
+    const wordsParagraph = document.createElement("p")
+    wordsParagraph.setAttribute("id", "wordsParagraph")
+
+    const answerThemeText = document.createTextNode(answerGuessed["theme"])
+    const answerWordsText = document.createTextNode(answerGuessed["words"].join(", "))
+
+    themeParagraph.appendChild(answerThemeText)
+    wordsParagraph.appendChild(answerWordsText)
+
+    answerDiv.appendChild(themeParagraph)
+    answerDiv.appendChild(wordsParagraph)
+
     answerDiv.setAttribute("class", "answers")
 
     answersGrid.appendChild(answerDiv)
@@ -107,6 +124,6 @@ function rewardAnswer() {
     selectedOptions.forEach((option) => {
       option.style.backgroundColor = '#1E293B'
     })
-    selectedOptions = []
   }
+  selectedOptions = []
 }
