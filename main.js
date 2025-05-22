@@ -58,6 +58,8 @@ function toggleClick(e) {
   else if (selectedOptions.length < 4) {
     selectedOptions.push(e.target)
     e.target.style.backgroundColor = '#009AFE'
+
+    if (e.target.classList.contains("error-animation")) e.target.classList.remove("error-animation")
   }
 
   if (selectedOptions.length == 4) rewardAnswer()
@@ -134,6 +136,11 @@ async function rewardAnswer() {
     answersGrid.style.height = (100 - newHeigth).toString() + "%"
   } else {
     selectedOptions.forEach((option) => {
+      if (option.classList.contains("error-animation")) {
+        option.classList.toggle("error-animation")
+      } else {
+        option.classList.toggle("error-animation")
+      }
       option.style.backgroundColor = '#1E293B'
     })
   }

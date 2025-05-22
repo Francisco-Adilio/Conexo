@@ -28,13 +28,12 @@ main {
 #answersGrid {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 3px;
 }
 
 .answers {
   background-color: green;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -42,10 +41,14 @@ main {
   font-weight: bold;
 }
 
+#wordsParagraph {
+  margin-bottom: 0;
+}
+
 #optionsGrid {
   height: 100%;
   display: grid;
-  gap: 6px;
+  gap: 8px;
   grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 
@@ -55,4 +58,25 @@ main {
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.5s;
+}
+
+.options:active {
+  margin: auto;
+  width: 85%;
+  height: 85%;
+}
+
+@keyframes error-animation {
+  0% { transform: rotate(0deg);  border: 2px solid red;}
+  25% { transform: rotate(5deg); border: 2px solid red;}
+  50% { transform: rotate(0eg); border: 2px solid red;}
+  75% { transform: rotate(-5deg); border: 2px solid red;}
+  100% { transform: rotate(0deg); border: 2px solid red;}
+}
+
+.error-animation {
+  animation-name: error-animation;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
 }
