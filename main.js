@@ -22,7 +22,8 @@ function shuffleArray(array) {
 function changeOptionColor(e) {
   e.target.style.backgroundColor = '#1E293B'
 }
-async function generateBoard() {
+
+async function generateInitialBoard() {
   const answers = await selectAnswers()
   let board = []
   answers.forEach((answer) => {
@@ -32,20 +33,25 @@ async function generateBoard() {
   })
 
   shuffleArray(board)
-  board.forEach((word) => {
+  generateBoard(board)
+
+  return answers
+}
+
+function generateBoard(wordsList) {
+  wordsList.forEach((word, index) => {
     const option = document.createElement("div")
     const optionText = document.createTextNode(word)
     option.appendChild(optionText)
     option.setAttribute("class", "options")
     option.addEventListener("click", toggleClick)
     option.addEventListener("animationend", changeOptionColor)
+    option.style.order = (index+1).toString()
     optionsGrid.appendChild(option)
   })
-
-  return answers
 }
 
-generateBoard()
+generateInitialBoard()
 
 const optionsGrid = document.querySelector("#optionsGrid")
 const answersGrid = document.querySelector("#answersGrid")
@@ -109,11 +115,26 @@ async function rewardAnswer() {
   const response = await fetch('./answers.json')
   const answers = await response.json()
 
-  if (verifyAnswer(guess, answers)) {
-    submitedAnswers++
+  if (verifyAnswer(guess, answers)) { 
+    selectedOptions.forEach((option, index) => {
+      if (index == 3) option.addEventListener("transitionend", correctAnswer)
+      option.style.order = "0"
+    })
+  } else {
+    selectedOptions.forEach((option) => {
+      option.classList.toggle("error-animation")
+    })
+    selectedOptions = []
+  }
+}
+
+function correctAnswer() {
     selectedOptions.forEach((option) => {
       option.remove()
     })
+    selectedOptions = []
+    submitedAnswers++
+
     let newHeigth = 100 - 25 * submitedAnswers
     optionsGrid.style.height = newHeigth.toString() + "%"
 
@@ -138,14 +159,4 @@ async function rewardAnswer() {
 
     answersGrid.appendChild(answerDiv)
     answersGrid.style.height = (100 - newHeigth).toString() + "%"
-  } else {
-    selectedOptions.forEach((option) => {
-      if (option.classList.contains("error-animation")) {
-        option.classList.toggle("error-animation")
-      } else {
-        option.classList.toggle("error-animation")
-      }
-    })
-  }
-  selectedOptions = []
 }

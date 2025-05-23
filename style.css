@@ -59,6 +59,7 @@ main {
   justify-content: center;
   align-items: center;
   transition: background-color 0.2s;
+  transition: order 0.5s;
 }
 
 .options:active {
