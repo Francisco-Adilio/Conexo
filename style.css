@@ -31,7 +31,6 @@ main {
 }
 
 .answers {
-  background-color: green;
   border-radius: 10px;
   margin-bottom: 8px;
   text-align: center;
@@ -59,7 +58,6 @@ main {
   justify-content: center;
   align-items: center;
   transition: background-color 0.2s;
-  transition: order 0.5s;
 }
 
 .options:active {
@@ -78,6 +76,6 @@ main {
 
 .error-animation {
   animation-name: error-animation;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-delay: 0.2s;
 }

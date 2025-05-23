@@ -117,7 +117,10 @@ async function rewardAnswer() {
 
   if (verifyAnswer(guess, answers)) { 
     selectedOptions.forEach((option, index) => {
-      if (index == 3) option.addEventListener("transitionend", correctAnswer)
+      option.style.transition = `order ${1.2 - index * 0.3}s`
+      if (index == 3) {
+        option.addEventListener("transitionend", correctAnswer)
+      }
       option.style.order = "0"
     })
   } else {
@@ -129,34 +132,37 @@ async function rewardAnswer() {
 }
 
 function correctAnswer() {
-    selectedOptions.forEach((option) => {
-      option.remove()
-    })
-    selectedOptions = []
-    submitedAnswers++
+  selectedOptions.forEach((option) => {
+    option.remove()
+  })
+  selectedOptions = []
+  submitedAnswers++
 
-    let newHeigth = 100 - 25 * submitedAnswers
-    optionsGrid.style.height = newHeigth.toString() + "%"
+  let newHeigth = 100 - 25 * submitedAnswers
+  optionsGrid.style.height = newHeigth.toString() + "%"
 
-    const answerDiv = document.createElement("div")
+  const answerDiv = document.createElement("div")
 
-    const themeParagraph = document.createElement("p")
-    themeParagraph.setAttribute("id", "themeParagraph")
+  const themeParagraph = document.createElement("p")
+  themeParagraph.setAttribute("id", "themeParagraph")
 
-    const wordsParagraph = document.createElement("p")
-    wordsParagraph.setAttribute("id", "wordsParagraph")
+  const wordsParagraph = document.createElement("p")
+  wordsParagraph.setAttribute("id", "wordsParagraph")
 
-    const answerThemeText = document.createTextNode(answerGuessed["theme"])
-    const answerWordsText = document.createTextNode(answerGuessed["words"].join(", "))
+  const answerThemeText = document.createTextNode(answerGuessed["theme"])
+  const answerWordsText = document.createTextNode(answerGuessed["words"].join(", "))
 
-    themeParagraph.appendChild(answerThemeText)
-    wordsParagraph.appendChild(answerWordsText)
+  themeParagraph.appendChild(answerThemeText)
+  wordsParagraph.appendChild(answerWordsText)
 
-    answerDiv.appendChild(themeParagraph)
-    answerDiv.appendChild(wordsParagraph)
+  answerDiv.appendChild(themeParagraph)
+  answerDiv.appendChild(wordsParagraph)
 
-    answerDiv.setAttribute("class", "answers")
+  answerDiv.setAttribute("class", "answers")
 
-    answersGrid.appendChild(answerDiv)
-    answersGrid.style.height = (100 - newHeigth).toString() + "%"
+  const answerColors = ["#C2410C", "#6D28D9", "#0E7490", "#047857"]
+  answerDiv.style.backgroundColor = answerColors[submitedAnswers-1]
+
+  answersGrid.appendChild(answerDiv)
+  answersGrid.style.height = (100 - newHeigth).toString() + "%"
 }
