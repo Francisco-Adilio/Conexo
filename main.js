@@ -75,7 +75,12 @@ function toggleClick(e) {
   if (selectedOptions.length == 4) rewardAnswer()
 }
 
+let numberOfGuesses = 0
+const numberOfGuessesText = document.querySelector("#numberOfGuesses")
 function submitGuess(options) {
+  numberOfGuesses++
+  numberOfGuessesText.innerText = `Tentativas: ${numberOfGuesses}`
+
   let guess = []
   options.forEach((option) => {
     guess.push(option.childNodes[0].data)

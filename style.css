@@ -25,6 +25,13 @@ main {
   padding: 5px;
 }
 
+#numberOfGuesses {
+  margin-top: 0;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
 #answersGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,4 +85,13 @@ main {
   animation-name: error-animation;
   animation-duration: 1s;
   animation-delay: 0.2s;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
 }
