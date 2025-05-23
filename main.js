@@ -145,6 +145,7 @@ function correctAnswer() {
 
   let newHeigth = 100 - 25 * submitedAnswers
   optionsGrid.style.height = newHeigth.toString() + "%"
+  optionsGrid.style.gridTemplateRows = `repeat(${4-submitedAnswers}, 1fr)`
 
   const answerDiv = document.createElement("div")
 

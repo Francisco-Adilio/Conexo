@@ -10,18 +10,20 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #mainframe {
-  width: 500px;
+  width: 550px;
   max-width: 80vw;
-  height: 350px;
+  height: 400px;
   padding: 5px;
 }
 
@@ -55,15 +57,19 @@ main {
   height: 100%;
   display: grid;
   gap: 8px;
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(4, 1fr);
+  user-select: none;
 }
 
 .options {
+  font-size: 1rem;
   display: flex;
   background-color: #1E293B;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  text-align: center;
   transition: background-color 0.2s;
 }
 

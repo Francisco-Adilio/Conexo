@@ -1,74 +1,106 @@
 [
   {
-    "theme": "pronomes relativos",
-    "words": ["qual", "próprio", "mesma", "tal"]
+    "theme": "PRONOMES RELATIVOS",
+    "words": ["QUAL", "PRÓPRIO", "MESMA", "TAL"]
   },
   {
-    "theme": "pronomes demonstrativos",
-    "words": ["aquela", "este", "isso", "aquilo"]
+    "theme": "PRONOMES DEMONSTRATIVOS",
+    "words": ["AQUELA", "ESTE", "ISSO", "AQUILO"]
   },
   {
-    "theme": "pronome pessoais oblíquos",
-    "words": ["mim", "te", "lhe", "consigo"]
+    "theme": "PRONOME PESSOAIS OBLÍQUOS",
+    "words": ["MIM", "TE", "LHE", "CONSIGO"]
   },
   {
-    "theme": "pronome pessoais retos",
-    "words": ["eu", "ele", "vos", "nos"]
+    "theme": "PRONOME PESSOAIS RETOS",
+    "words": ["EU", "ELE", "VÓS", "NÓS"]
   },
   {
-    "theme": "conjunções adversativas",
-    "words": ["mas", "porém", "todavia", "no entanto"]
+    "theme": "CONJUNÇÕES ADVERSATIVAS",
+    "words": ["MAS", "PORÉM", "TODAVIA", "NO ENTANTO"]
   },
   {
-    "theme": "conjunções aditivas",
-    "words": ["e", "também", "além disso", "bem como"]
+    "theme": "CONJUNÇÕES ADITIVAS",
+    "words": ["E", "TAMBÉM", "ALÉM DISSO", "BEM COMO"]
   },
   {
-    "theme": "conjunções conclusivas",
-    "words": ["logo", "portanto", "então", "assim"]
+    "theme": "CONJUNÇÕES CONCLUSIVAS",
+    "words": ["LOGO", "PORTANTO", "ENTÃO", "ASSIM"]
   },
   {
-    "theme": "conjunções alternativas",
-    "words": ["ou", "ora", "nem", "talvez"]
+    "theme": "CONJUNÇÕES ALTERNATIVAS",
+    "words": ["OU", "ORA", "NEM", "TALVEZ"]
   },
   {
-    "theme": "preposições",
-    "words": ["a", "de", "perante", "em"]
+    "theme": "PREPOSIÇÕES",
+    "words": ["A", "DE", "PERANTE", "EM"]
   },
   {
-    "theme": "advérbio de lugar",
-    "words": ["aqui", "cá", "longe", "lá"]
+    "theme": "ADVÉRBIO DE LUGAR",
+    "words": ["AQUI", "CÁ", "LONGE", "LÁ"]
   },
   {
-    "theme": "advérbio de tempo",
-    "words": ["hoje", "atualmente", "depois", "agora"]
+    "theme": "ADVÉRBIO DE TEMPO",
+    "words": ["HOJE", "ATUALMENTE", "DEPOIS", "AGORA"]
   },
   {
-    "theme": "advérbio de afirmação",
-    "words": ["sim", "decerto", "realmente", "sem dúvida"]
+    "theme": "ADVÉRBIO DE AFIRMAÇÃO",
+    "words": ["SIM", "DECERTO", "REALMENTE", "SEM DÚVIDA"]
   },
   {
-    "theme": "advérbio de modo",
-    "words": ["calmamente", "primeiramente", "a frente", "de mansinho"]
+    "theme": "ADVÉRBIO DE MODO",
+    "words": ["CALMAMENTE", "PRIMEIRA- MENTE", "A FRENTE", "DE MANSINHO"]
   },
   {
-    "theme": "verbos dicendi",
-    "words": ["digo", "falar", "explicitou", "afirmamos"]
+    "theme": "VERBOS DICENDI",
+    "words": ["DIGO", "FALAR", "EXPLICITOU", "AFIRMAMOS"]
   },
   {
-    "theme": "verbos infinitivos",
-    "words": ["achar", "comer", "chover", "jogar"]
+    "theme": "VERBOS INFINITIVOS",
+    "words": ["ACHAR", "COMER", "CHOVER", "JOGAR"]
   },
   {
-    "theme": "verbos de fenômenos da natureza",
-    "words": ["nevar", "garoar", "ventar", "amanhecer"]
+    "theme": "VERBOS DE FENÔMENOS DA NATUREZA",
+    "words": ["NEVAR", "GAROAR", "VENTAR", "AMANHECER"]
   },
   {
-    "theme": "verbos no subjuntivo",
-    "words": ["olhe", "houvesse", "cantes", "propuser"]
+    "theme": "VERBOS NO SUBJUNTIVO",
+    "words": ["OLHE", "HOUVESSE", "CANTES", "PROPUSER"]
   },
   {
-    "theme": "numeral",
-    "words": ["terceiro", "dobro", "quatro", "C"]
+    "theme": "NUMERAL",
+    "words": ["TERCEIRO", "DOBRO", "QUATRO", "C"]
+  },
+  {
+    "theme": "ADVÉRBIO DE INTENSIDADE",
+    "words": ["POUCO", "MAIS OU MENOS", "DEMAIS", "MUITO"]
+  },
+  {
+    "theme": "ADVÉRBIO DE NEGAÇÃO",
+    "words": ["NUNCA", "NÃO", "DE MODO ALGUM", "NINGUÉM"]
+  },
+  {
+    "theme": "CONJUNÇÃO CAUSAL",
+    "words": ["PORQUANTO", "VISTO QUE", "JÁ QUE", "PORQUE"]
+  },
+  {
+    "theme": "CONJUNÇÃO CONDICIONAL",
+    "words": ["CASO", "SE", "DESDE QUE", "CONTANTO QUE"]
+  },
+  {
+    "theme": "PRONOME POSSESSIVO",
+    "words": ["MEU", "SEU", "TUA", "DELES"]
+  },
+  {
+    "theme": "PRONOME INTERROGATIVO",
+    "words": ["QUAL", "QUAIS", "QUANTO", "QUEM"]
+  },
+  {
+    "theme": "VERBOS INTRANSITIVOS",
+    "words": ["LEVANTAR", "CASAR", "MORRER", "SUCEDER"]
+  },
+  {
+    "theme": "VERBOS IRREGULARES",
+    "words": ["MEDIR", "CABER", "SUAR", "POLIR"]
   }
 ]
