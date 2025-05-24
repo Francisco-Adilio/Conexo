@@ -101,3 +101,17 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
+
+#playAgain {
+  background-color: #009AFE;
+  border: blue solid 2px;
+  color: black;  
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 200px;
+  font-size: large;
+}
+
+#playAgain:hover {
+  transform: scale(1.1);
+}
