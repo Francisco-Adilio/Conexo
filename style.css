@@ -70,7 +70,14 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.options:hover {
+  transform: translate(-2px, -2px) scale(1.05);
+  background-color: #2B2D42;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.247);
+  cursor: pointer;
 }
 
 .options:active {
@@ -80,16 +87,20 @@ main {
 }
 
 @keyframes error-animation {
-  0% { transform: rotate(0deg);  border: 2px solid red;}
-  25% { transform: rotate(5deg); border: 2px solid red;}
-  50% { transform: rotate(0eg); border: 2px solid red;}
-  75% { transform: rotate(-5deg); border: 2px solid red;}
-  100% { transform: rotate(0deg); border: 2px solid red;}
+  0% { transform: rotate(0deg); border: 2px solid red; }
+  14.2857142857% { transform: rotate(5deg); border: 2px solid red; }
+  28.5714285714% { transform: rotate(-5deg); border: 2px solid red; }
+  42.8571428571% { transform: rotate(0deg); border: 2px solid red; }
+  57.1428571428% { transform: rotate(5deg); border: 2px solid red; }
+  71.42857142849999% { transform: rotate(-5deg); border: 2px solid red; }
+  85.71428571419999% { transform: rotate(0deg); border: 2px solid red; }
+  99% { transform: rotate(0deg); border: 2px solid red; }
 }
 
 .error-animation {
+  transition-duration: 0.5s;
   animation-name: error-animation;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-delay: 0.2s;
 }
 
