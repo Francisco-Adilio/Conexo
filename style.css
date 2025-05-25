@@ -64,7 +64,7 @@ main {
 }
 
 .options {
-  font-size: clamp(1rem, 3cqw, 2rem);
+  font-size: min(1rem, 3cqw);
   word-break: break-word;
   overflow-wrap: break-word;
   display: flex;
