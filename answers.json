@@ -8,12 +8,12 @@
     "words": ["AQUELA", "ESTE", "ISSO", "AQUILO"]
   },
   {
-    "theme": "PRONOME PESSOAIS OBLÍQUOS",
+    "theme": "PRONOMES PESSOAIS OBLÍQUOS",
     "words": ["MIM", "TE", "LHE", "CONSIGO"]
   },
   {
-    "theme": "PRONOME PESSOAIS RETOS",
-    "words": ["EU", "ELE", "VÓS", "NÓS"]
+    "theme": "PRONOMES PESSOAIS RETOS",
+    "words": ["EU", "ELE", "VOS", "NOS"]
   },
   {
     "theme": "CONJUNÇÕES ADVERSATIVAS",
@@ -36,20 +36,20 @@
     "words": ["A", "DE", "PERANTE", "EM"]
   },
   {
-    "theme": "ADVÉRBIO DE LUGAR",
+    "theme": "ADVÉRBIOS DE LUGAR",
     "words": ["AQUI", "CÁ", "LONGE", "LÁ"]
   },
   {
-    "theme": "ADVÉRBIO DE TEMPO",
+    "theme": "ADVÉRBIOS DE TEMPO",
     "words": ["HOJE", "ATUALMENTE", "DEPOIS", "AGORA"]
   },
   {
-    "theme": "ADVÉRBIO DE AFIRMAÇÃO",
+    "theme": "ADVÉRBIOS DE AFIRMAÇÃO",
     "words": ["SIM", "DECERTO", "REALMENTE", "SEM DÚVIDA"]
   },
   {
-    "theme": "ADVÉRBIO DE MODO",
-    "words": ["CALMAMENTE", "PRIMEIRA- MENTE", "A FRENTE", "DE MANSINHO"]
+    "theme": "ADVÉRBIOS DE MODO",
+    "words": ["CALMAMENTE", "PRIMEIRAMENTE", "A FRENTE", "DE MANSINHO"]
   },
   {
     "theme": "VERBOS DICENDI",
@@ -68,31 +68,31 @@
     "words": ["OLHE", "HOUVESSE", "CANTES", "PROPUSER"]
   },
   {
-    "theme": "NUMERAL",
+    "theme": "NUMERAIS",
     "words": ["TERCEIRO", "DOBRO", "QUATRO", "C"]
   },
   {
-    "theme": "ADVÉRBIO DE INTENSIDADE",
+    "theme": "ADVÉRBIOS DE INTENSIDADE",
     "words": ["POUCO", "MAIS OU MENOS", "DEMAIS", "MUITO"]
   },
   {
-    "theme": "ADVÉRBIO DE NEGAÇÃO",
+    "theme": "ADVÉRBIOS DE NEGAÇÃO",
     "words": ["NUNCA", "NÃO", "DE MODO ALGUM", "NINGUÉM"]
   },
   {
-    "theme": "CONJUNÇÃO CAUSAL",
+    "theme": "CONJUNÇÕES CAUSAIS",
     "words": ["PORQUANTO", "VISTO QUE", "JÁ QUE", "PORQUE"]
   },
   {
-    "theme": "CONJUNÇÃO CONDICIONAL",
+    "theme": "CONJUNÇÕES CONDICIONAIS",
     "words": ["CASO", "SE", "DESDE QUE", "CONTANTO QUE"]
   },
   {
-    "theme": "PRONOME POSSESSIVO",
+    "theme": "PRONOMES POSSESSIVOS",
     "words": ["MEU", "SEU", "TUA", "DELES"]
   },
   {
-    "theme": "PRONOME INTERROGATIVO",
+    "theme": "PRONOMES INTERROGATIVOS",
     "words": ["QUAL", "QUAIS", "QUANTO", "QUEM"]
   },
   {
