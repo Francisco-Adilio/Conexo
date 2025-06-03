@@ -1,13 +1,32 @@
-async function selectAnswers() {
-  const chosedAnswers = []
-  const response = await fetch('./answers.json')
+async function selectThemes() {
+  const chosedThemes = []
+  const response = await fetch('./answersExpanded.json')
   const data = await response.json()
   
   for (let i = 0; i < 4; i++) {
     let randomIndex = Math.floor(Math.random()*data.length)
-    chosedAnswers.push(data[randomIndex])
+    chosedThemes.push(data[randomIndex])
     data.splice(randomIndex, 1)
   }
+  return chosedThemes
+}
+
+async function selectAnswers() {
+  let chosedAnswers = []
+
+  const themes = await selectThemes()
+  const themesCopy = structuredClone(themes)
+
+  themesCopy.forEach((theme, index) => {
+    chosedAnswers.push({"theme": theme["theme"], "words": []})
+    let words = theme["words"]
+    for (let i = 0; i < 4; i++) {
+      let randomIndex = Math.floor(Math.random()*words.length)
+      chosedAnswers[index]["words"].push(words[randomIndex])
+      words.splice(randomIndex, 1)
+    }
+  })
+
   return chosedAnswers
 }
 
@@ -23,31 +42,29 @@ function changeOptionColor(e) {
   e.target.style.backgroundColor = '#1E293B'
 }
 
+const answersPromise = selectAnswers()
 async function generateInitialBoard() {
-  const answers = await selectAnswers()
-  let board = []
+  const answers = await answersPromise
+  const board = []
   answers.forEach((answer) => {
     answer["words"].forEach((word) => {
       board.push(word)
     })
   })
-
   shuffleArray(board)
   generateBoard(board)
-
-  return answers
 }
 
 function generateBoard(wordsList) {
-  wordsList.forEach((word, index) => {
-    const option = document.createElement("div")
-    const optionText = document.createTextNode(word)
-    option.appendChild(optionText)
-    option.setAttribute("class", "options")
-    option.addEventListener("click", toggleClick)
-    option.addEventListener("animationend", changeOptionColor)
-    option.style.order = (index+1).toString()
-    optionsGrid.appendChild(option)
+    wordsList.forEach((word, index) => {
+      const option = document.createElement("div")
+      const optionText = document.createTextNode(word)
+      option.appendChild(optionText)
+      option.setAttribute("class", "options")
+      option.addEventListener("click", toggleClick)
+      option.addEventListener("animationend", changeOptionColor)
+      option.style.order = (index+1).toString()
+      optionsGrid.appendChild(option)
   })
 }
 
@@ -116,9 +133,7 @@ function verifyAnswer(guess, answers) {
 let submitedAnswers = 0
 async function rewardAnswer() {
   const guess = submitGuess(selectedOptions)
-
-  const response = await fetch('./answers.json')
-  const answers = await response.json()
+  const answers = await answersPromise
 
   if (verifyAnswer(guess, answers)) { 
     selectedOptions.forEach((option, index) => {
@@ -135,7 +150,6 @@ async function rewardAnswer() {
     selectedOptions = []
   }
 
-  console.log(submitedAnswers)
   if (submitedAnswers == 3) endGame()
 }
 
