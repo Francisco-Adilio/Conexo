@@ -1,0 +1,428 @@
+[
+  {
+    "theme": "PRONOMES RELATIVOS",
+    "words": [
+      "CUJO",
+      "MESMA",
+      "ONDE",
+      "PRÓPRIO",
+      "QUAISQUER",
+      "QUAL",
+      "QUALQUER",
+      "QUANTAS",
+      "QUANTO",
+      "QUE",
+      "QUEM",
+      "TAL"
+    ]
+  },
+  {
+    "theme": "PRONOMES DEMONSTRATIVOS",
+    "words": [
+      "AQUELA",
+      "AQUELAS",
+      "AQUELE",
+      "AQUILO",
+      "ESSA",
+      "ESSE",
+      "ESSES",
+      "ESTE",
+      "ISSO",
+      "ISTO"
+    ]
+  },
+  {
+    "theme": "PRONOMES PESSOAIS OBLÍQUOS",
+    "words": [
+      "A",
+      "CONSIGO",
+      "LHE",
+      "LHES",
+      "ME",
+      "MIM",
+      "NOS",
+      "O",
+      "OS",
+      "TE",
+      "VOS"
+    ]
+  },
+  {
+    "theme": "PRONOMES PESSOAIS RETOS",
+    "words": [
+      "ELA",
+      "ELAS",
+      "ELE",
+      "ELES",
+      "EU",
+      "NÓS",
+      "TU",
+      "VOCÊ",
+      "VÓS"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES ADVERSATIVAS",
+    "words": [
+      "AINDA ASSIM",
+      "CONTUDO",
+      "EMBORA",
+      "ENTRETANTO",
+      "MAS",
+      "MAS TAMBÉM",
+      "MESMO ASSIM",
+      "NO ENTANTO",
+      "NÃO OBSTANTE",
+      "PORÉM",
+      "SÓ QUE",
+      "TODAVIA"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES ADITIVAS",
+    "words": [
+      "AINDA",
+      "ALÉM DISSO",
+      "ASSIM COMO",
+      "BEM COMO",
+      "COMO TAMBÉM",
+      "DE IGUAL MODO",
+      "E",
+      "IGUALMENTE",
+      "JUNTO A",
+      "TAMBÉM",
+      "TAMPOUCO",
+      "TANTO QUANTO"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES CONCLUSIVAS",
+    "words": [
+      "ASSIM",
+      "ASSIM SENDO",
+      "DESSA FORMA",
+      "DESTARTE",
+      "ENTÃO",
+      "LOGICAMENTE",
+      "LOGO",
+      "POR CONSEGUINTE",
+      "POR ISSO",
+      "PORTANTO"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES ALTERNATIVAS",
+    "words": [
+      "JÁ",
+      "NEM",
+      "ORA",
+      "OU",
+      "OU ENTÃO",
+      "OU SENÃO",
+      "QUANTO",
+      "QUER",
+      "QUER SEJA",
+      "SEJA",
+      "TALVEZ",
+      "TANTO"
+    ]
+  },
+  {
+    "theme": "PREPOSIÇÕES",
+    "words": [
+      "A",
+      "ANTE",
+      "APÓS",
+      "ATÉ",
+      "COM",
+      "DE",
+      "EM",
+      "ENTRE",
+      "PARA",
+      "PERANTE",
+      "SEM",
+      "SOB"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE LUGAR",
+    "words": [
+      "ABAIXO",
+      "ACIMA",
+      "ADIANTE",
+      "AQUI",
+      "ATRÁS",
+      "CÁ",
+      "DENTRO",
+      "DISTANTE",
+      "FORA",
+      "LONGE",
+      "LÁ",
+      "PERTO"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE TEMPO",
+    "words": [
+      "AGORA",
+      "AMANHÃ",
+      "ANTES",
+      "ATUALMENTE",
+      "BREVEMENTE",
+      "CEDO",
+      "DEPOIS",
+      "ENQUANTO",
+      "HOJE",
+      "JÁ",
+      "LOGO",
+      "SEMPRE"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE AFIRMAÇÃO",
+    "words": [
+      "CERTAMENTE",
+      "CLARO",
+      "COM CERTEZA",
+      "DECERTO",
+      "EVIDENTEMENTE",
+      "INEGAVELMENTE",
+      "OBVIAMENTE",
+      "POSITIVAMENTE",
+      "REALMENTE",
+      "SEM DÚVIDA",
+      "SIM"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE MODO",
+    "words": [
+      "A FRENTE",
+      "CALMAMENTE",
+      "CORRETAMENTE",
+      "CUIDADOSAMENTE",
+      "DE MANSINHO",
+      "DESNECESSARIAMENTE",
+      "DEVAGAR",
+      "FELIZMENTE",
+      "INTENSAMENTE",
+      "PRIMEIRAMENTE",
+      "RAPIDAMENTE",
+      "SUAVEMENTE"
+    ]
+  },
+  {
+    "theme": "VERBOS DICENDI",
+    "words": [
+      "AFIRMAMOS",
+      "CONFESSAR",
+      "DECLARAR",
+      "DIGO",
+      "EXPLICITOU",
+      "FALAR",
+      "GRITAR",
+      "INFORMAR",
+      "MENCIONAR",
+      "ORDENAR",
+      "RECLAMAR",
+      "RESPONDER"
+    ]
+  },
+  {
+    "theme": "VERBOS INFINITIVOS",
+    "words": [
+      "ACHAR",
+      "ANDAR",
+      "CANTAR",
+      "CHOVER",
+      "COMER",
+      "CORRER",
+      "DORMIR",
+      "ESCREVER",
+      "JOGAR",
+      "LER",
+      "NADAR",
+      "VIAJAR"
+    ]
+  },
+  {
+    "theme": "VERBOS DE FENÔMENOS DA NATUREZA",
+    "words": [
+      "ALVORECER",
+      "AMANHECER",
+      "ANOITECER",
+      "CHUVISCAR",
+      "ENTARDECER",
+      "ESFRIAR",
+      "ESQUENTAR",
+      "GAROAR",
+      "NEVAR",
+      "RELAMPAGUEAR",
+      "TROVEJAR",
+      "VENTAR"
+    ]
+  },
+  {
+    "theme": "VERBOS NO SUBJUNTIVO",
+    "words": [
+      "CANTES",
+      "CHEGUE",
+      "FAÇA",
+      "FIQUE",
+      "HOUVESSE",
+      "OLHE",
+      "POSSA",
+      "PROPUSER",
+      "SEJA",
+      "TENHA",
+      "VENHA",
+      "VÁ"
+    ]
+  },
+  {
+    "theme": "NUMERAIS",
+    "words": [
+      "CEM",
+      "DOBRO",
+      "DÉCIMO",
+      "MEIO",
+      "MIL",
+      "QUATRO",
+      "QUINTO",
+      "SEGUNDO",
+      "TERCEIRO",
+      "TRIPLO"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE INTENSIDADE",
+    "words": [
+      "BASTANTE",
+      "DEMAIS",
+      "EXCESSIVAMENTE",
+      "EXTREMAMENTE",
+      "INTENSAMENTE",
+      "LEVEMENTE",
+      "MAIS OU MENOS",
+      "MENOS",
+      "MUITO",
+      "POUCO",
+      "QUASE",
+      "TOTALMENTE"
+    ]
+  },
+  {
+    "theme": "ADVÉRBIOS DE NEGAÇÃO",
+    "words": [
+      "DE FORMA ALGUMA",
+      "DE JEITO NENHUM",
+      "DE MODO ALGUM",
+      "IMPOSSIVELMENTE",
+      "JAMAIS",
+      "NEGATIVAMENTE",
+      "NINGUÉM",
+      "NUNCA",
+      "NUNQUINHA",
+      "NÃO",
+      "NÃO MAIS",
+      "NÃO MESMO"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES CAUSAIS",
+    "words": [
+      "COMO",
+      "DEVIDO A",
+      "EM RAZÃO DE",
+      "EM VISTA DE",
+      "JÁ QUE",
+      "POIS",
+      "POR CONTA DE",
+      "PORQUANTO",
+      "PORQUE",
+      "UMA VEZ QUE",
+      "VISTO QUE"
+    ]
+  },
+  {
+    "theme": "CONJUNÇÕES CONDICIONAIS",
+    "words": [
+      "A MENOS QUE",
+      "CASO",
+      "CONTANTO QUE",
+      "DADO QUE",
+      "DESDE QUE",
+      "MESMO QUE",
+      "NA CONDIÇÃO DE",
+      "NO CASO DE",
+      "SE",
+      "SE BEM QUE",
+      "SOB CONDIÇÃO",
+      "SUPONDO QUE"
+    ]
+  },
+  {
+    "theme": "PRONOMES POSSESSIVOS",
+    "words": [
+      "DELA",
+      "DELE",
+      "DELES",
+      "MEU",
+      "MINHA",
+      "NOSSOS",
+      "SEU",
+      "SUA",
+      "SUAS",
+      "TEU",
+      "TUA",
+      "VOSSAS"
+    ]
+  },
+  {
+    "theme": "PRONOMES INTERROGATIVOS",
+    "words": [
+      "COMO",
+      "ONDE",
+      "POR QUE",
+      "QUAIS",
+      "QUAL",
+      "QUANTO",
+      "QUANTOS",
+      "QUE",
+      "QUEM"
+    ]
+  },
+  {
+    "theme": "VERBOS INTRANSITIVOS",
+    "words": [
+      "CASAR",
+      "CHEGAR",
+      "DORMIR",
+      "EXISTIR",
+      "FUGIR",
+      "LEVANTAR",
+      "MORRER",
+      "PARTIR",
+      "SUCEDER",
+      "TOSSIR",
+      "TROPEÇAR"
+    ]
+  },
+  {
+    "theme": "VERBOS IRREGULARES",
+    "words": [
+      "CABER",
+      "DIZER",
+      "ESTAR",
+      "FAZER",
+      "IR",
+      "MEDIR",
+      "POLIR",
+      "PÔR",
+      "SUAR",
+      "TRAZER",
+      "VER",
+      "VIR"
+    ]
+  }
+]
